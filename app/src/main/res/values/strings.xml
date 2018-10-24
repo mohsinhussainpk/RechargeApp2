@@ -131,4 +131,8 @@
         <item>@string/sort_by_popularity</item>
         <item>@string/sort_by_price</item>
     </string-array>
+    <string name="facebook_application_id" translatable="false">540642299739941</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb540642299739941</string>
+
+
 </resources>

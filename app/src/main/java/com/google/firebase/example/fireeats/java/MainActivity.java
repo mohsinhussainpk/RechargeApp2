@@ -40,6 +40,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.WriteBatch;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -267,8 +268,10 @@ public class MainActivity extends AppCompatActivity implements
     private void startSignIn() {
         // Sign in with FirebaseUI
         Intent intent = AuthUI.getInstance().createSignInIntentBuilder()
-                .setAvailableProviders(Collections.singletonList(
-                        new AuthUI.IdpConfig.EmailBuilder().build()))
+                .setAvailableProviders(Arrays.asList(
+                        new AuthUI.IdpConfig.EmailBuilder().build(),
+                        new AuthUI.IdpConfig.GoogleBuilder().build(),
+                        new AuthUI.IdpConfig.FacebookBuilder().build()))
                 .setIsSmartLockEnabled(false)
                 .build();
 
